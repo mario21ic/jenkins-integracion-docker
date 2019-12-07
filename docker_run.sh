@@ -1,6 +1,9 @@
 #!/bin/bash
 
 mkdir build/
+if [ $? != 0 ]; then
+  exit 1
+fi
 
 docker run node:7-alpine node --version
 docker run node:6-alpine node --version
